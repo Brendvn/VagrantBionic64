@@ -4,7 +4,7 @@
 	- Bionic64
 	- Nginx
 	- Php7.2
-	- Mysql 5.7
+	- 10.2.20-MariaDB
 
 1. Install vagrant
 	- `sudo apt install virtualbox`
@@ -16,20 +16,20 @@
 
 3. After installation (Vagrant up)
 	- `vagrant ssh`
-	- `sudo mysql_secure_installation`
-
+	- `sudo apt-get install mariadb-server mariadb-client -y`
+	- `mysql_secure_installation`
 	- `sudo mysql`
 
 	- {{password}} = xxx
-	- `ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY '{{password}}';`
-	- `GRANT ALL PRIVILEGES ON *.* TO root@'%' IDENTIFIED BY '{{password}}';`
+	- `mysql -u root -p`
+	- `GRANT ALL PRIVILEGES ON *.* TO root@'%' IDENTIFIED BY '{{password}}' WITH GRANT OPTION;`
 	- `FLUSH PRIVILEGES;`
 
 4. Add bind-address to mysql.cnf file
 	- run `ifconfig`
 	- Copy the inet ip and replace in {{inet ip}}
-	- `cd /etc/mysql/mysql.conf.d`
-	- `sudo vi mysqld.cnf`
+	- `cd /etc/mysql/`
+	- `sudo vi my.cnf`
 
 - Add These settings to the file
  	bind-address            = localhost

@@ -44,8 +44,14 @@ echo "Configuring Nginx"
 	sudo service nginx restart > /dev/null
 
 echo "Preparing Mysql"
-	sudo apt-get install mysql-server php7.2-mysql -y
-
-
-
+	sudo apt-get install software-properties-common
+	sudo apt-key adv --recv-keys --keyserver hkp://keyserver.ubuntu.com:80 0xF1656F24C74CD1D8
+	sudo sh -c "echo 'deb https://mirrors.evowise.com/mariadb/repo/10.2/ubuntu '$(lsb_release -cs)' main' > /etc/apt/sources.list.d/MariaDB102.list"
+	sudo apt-get install php7.2-mysql -y
+	sudo apt-get update -y
+# Clean up
+	sudo cd
+	cd /vagrant/
+	sudo rm -rf html
+	
 echo "Finished provisioning."
