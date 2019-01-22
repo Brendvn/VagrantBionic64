@@ -50,8 +50,7 @@ echo "Preparing Mysql"
 	sudo apt-get install php7.2-mysql -y
 	sudo apt-get update -y
 # Clean up
-	sudo cd
 	cd /vagrant/
-	sudo rm -rf html
+	sudo rm -rf html/
 	
 echo "Finished provisioning."
