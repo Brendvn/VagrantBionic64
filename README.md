@@ -27,7 +27,7 @@
 
 4. Add bind-address to mysql.cnf file
 	- run `ifconfig`
-	- Copy the inet ip replace in {{inet ip}}
+	- Copy the inet ip and replace in {{inet ip}}
 	- `cd /etc/mysql/mysql.conf.d`
 	- `sudo vi mysqld.cnf`
 
