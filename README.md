@@ -32,8 +32,8 @@
 	- `sudo vi my.cnf`
 
 - Add These settings to the file
- 	bind-address            = localhost
- 	bind-address            = {{inet ip}}
+ 	- bind-address            = localhost
+ 	- bind-address            = {{inet ip}}
 
 	- `sudo service mysql restart`
 
