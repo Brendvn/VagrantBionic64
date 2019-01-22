@@ -16,7 +16,7 @@
 
 3. After installation (Vagrant up)
 	- `vagrant ssh`
-	- `sudo mysql_secure_installation -> follow instructions`
+	- `sudo mysql_secure_installation`
 
 	- `sudo mysql`
 
