@@ -19,20 +19,21 @@
 	- sudo mysql_secure_installation -> follow instructions
 
 	- sudo mysql
-{{password}} = xxx
+
+	`{{password}} = xxx`
 	- ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY '{{password}}';
 	- GRANT ALL PRIVILEGES ON *.* TO root@'%' IDENTIFIED BY '{{password}}';
 	- FLUSH PRIVILEGES;
 
-4. Add bind-address to file
+4. Add bind-address to mysql.cnf file
 	- run ifconfig
-	- Copy the inet ip
+	- Copy the inet ip replace in {{inet ip}}
 	- cd /etc/mysql/mysql.conf.d
 	- sudo nano mysql.cnf
 
 
- `bind-address            = localhost`
- `bind-address            = {{inet ip}}`
+ 	`bind-address            = localhost`
+ 	`bind-address            = {{inet ip}}`
 
 	- sudo service mysql restart
 
