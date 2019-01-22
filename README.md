@@ -38,7 +38,7 @@
 	- `sudo service mysql restart`
 
 ### IP's and ports on host
-	- URL -> http://localhost:8081/
-	- MYSQL localhost:33061
+	- URL	http://localhost:8081/
+	- MYSQL	localhost:33061
 
 
