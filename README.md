@@ -18,7 +18,6 @@
 	- `vagrant ssh`
 	- `sudo apt-get install mariadb-server mariadb-client -y`
 	- `mysql_secure_installation`
-	- `sudo mysql`
 
 	- {{password}} = xxx
 	- `mysql -u root -p`
